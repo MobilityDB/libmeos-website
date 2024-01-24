@@ -5,225 +5,148 @@
     <link>/</link>
     <description>Recent content on MEOS</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 28 Jul 2022 12:25:21 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Thu, 28 Jul 2022 12:25:21 +0000</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Moving Features JSON (MF-JSON)</title>
       <link>/movingfeaturesformats/mfjson/</link>
       <pubDate>Fri, 29 Jul 2022 14:23:01 +0200</pubDate>
-      
       <guid>/movingfeaturesformats/mfjson/</guid>
-      <description>“Moving Features JSON” is a standard for encoding moving features in JSON. By using MF-JSON, rather than some other arbitrary scheme, you maximize the interoperability of your JSON output. MF-JSON is an Open Geospatial Consortium standard, which extends the GeoJSON standard.
-Examples {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingBoolean&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:true,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingInteger&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:2,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingFloat&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:2.5,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingText&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:&amp;ldquo;walking&amp;rdquo;,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;coordinates&amp;rdquo;:[1,1],&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;crs&amp;rdquo;:{&amp;ldquo;type&amp;rdquo;:&amp;ldquo;name&amp;rdquo;,&amp;ldquo;properties&amp;rdquo;:{&amp;ldquo;name&amp;rdquo;:&amp;ldquo;EPSG:5676&amp;rdquo;}},&amp;ldquo;coordinates&amp;rdquo;:[1,1],&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingInteger&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:[1,2],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;coordinates&amp;rdquo;:[[1,1],[2,2]],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Linear&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingText&amp;rdquo;,&amp;ldquo;sequences&amp;rdquo;:[{&amp;ldquo;values&amp;rdquo;:[&amp;ldquo;driving&amp;rdquo;,&amp;ldquo;driving&amp;rdquo;],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true},{&amp;ldquo;values&amp;rdquo;:[&amp;ldquo;walking&amp;rdquo;,&amp;ldquo;walking&amp;rdquo;],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T10:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T11:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true}],&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Stepwise&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;sequences&amp;rdquo;:[{&amp;ldquo;coordinates&amp;rdquo;:[[1,1],[2,2]],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true},{&amp;ldquo;coordinates&amp;rdquo;:[[3,3],[3,3]],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T10:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T11:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true}],&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Linear&amp;rdquo;]} </description>
+      <description>“Moving Features JSON” is a standard for encoding moving features in JSON. By using MF-JSON, rather than some other arbitrary scheme, you maximize the interoperability of your JSON output. MF-JSON is an Open Geospatial Consortium standard, which extends the GeoJSON standard.&#xA;Examples {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingBoolean&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:true,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingInteger&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:2,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingFloat&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:2.5,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingText&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:&amp;ldquo;walking&amp;rdquo;,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;coordinates&amp;rdquo;:[1,1],&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;crs&amp;rdquo;:{&amp;ldquo;type&amp;rdquo;:&amp;ldquo;name&amp;rdquo;,&amp;ldquo;properties&amp;rdquo;:{&amp;ldquo;name&amp;rdquo;:&amp;ldquo;EPSG:5676&amp;rdquo;}},&amp;ldquo;coordinates&amp;rdquo;:[1,1],&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingInteger&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:[1,2],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;coordinates&amp;rdquo;:[[1,1],[2,2]],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Linear&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingText&amp;rdquo;,&amp;ldquo;sequences&amp;rdquo;:[{&amp;ldquo;values&amp;rdquo;:[&amp;ldquo;driving&amp;rdquo;,&amp;ldquo;driving&amp;rdquo;],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true},{&amp;ldquo;values&amp;rdquo;:[&amp;ldquo;walking&amp;rdquo;,&amp;ldquo;walking&amp;rdquo;],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T10:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T11:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true}],&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Stepwise&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;sequences&amp;rdquo;:[{&amp;ldquo;coordinates&amp;rdquo;:[[1,1],[2,2]],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true},{&amp;ldquo;coordinates&amp;rdquo;:[[3,3],[3,3]],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T10:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T11:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true}],&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Linear&amp;rdquo;]} </description>
     </item>
-    
     <item>
       <title>Well-Known Binary (WKB)</title>
       <link>/movingfeaturesformats/wkb/</link>
       <pubDate>Fri, 29 Jul 2022 14:22:51 +0200</pubDate>
-      
       <guid>/movingfeaturesformats/wkb/</guid>
-      <description>“Well-known binary” is a scheme for writing moving features into a platform-independent array of bytes, usually for transport between systems or between programs. By using WKB, systems can avoid exposing their particular internal implementation of moving feature storage, for greater overall interoperability. It is an extension of the scheme for writing a simple features geometry into a platform-independent array of bytes.
-Data Types The WKB specification uses five basic types common to most typed languages: an unsigned byte, a 4-byte unsigned integer, an 8-byte unsigned integer, an 8-byte IEEE double, and a string of characters.</description>
+      <description>“Well-known binary” is a scheme for writing moving features into a platform-independent array of bytes, usually for transport between systems or between programs. By using WKB, systems can avoid exposing their particular internal implementation of moving feature storage, for greater overall interoperability. It is an extension of the scheme for writing a simple features geometry into a platform-independent array of bytes.&#xA;Data Types The WKB specification uses five basic types common to most typed languages: an unsigned byte, a 4-byte unsigned integer, an 8-byte unsigned integer, an 8-byte IEEE double, and a string of characters.</description>
     </item>
-    
     <item>
       <title>Well-Known Text (WKT)</title>
       <link>/movingfeaturesformats/wkt/</link>
       <pubDate>Fri, 29 Jul 2022 14:22:43 +0200</pubDate>
-      
       <guid>/movingfeaturesformats/wkt/</guid>
-      <description>“Well-known text” is a scheme for writing moving features into a standard text string. It is an extension of the scheme for writing a simple features geometry into a standard text string.
-WKT BNF For ease of presentation we suppose the following standard types: &amp;lt;integer&amp;gt;, &amp;lt;float&amp;gt;, &amp;lt;string&amp;gt;, and &amp;lt;timestamp with timezone&amp;gt;;
-Span types &amp;lt;comma&amp;gt; ::= &amp;#39;,&amp;#39; &amp;lt;left paren&amp;gt; ::= &amp;#39;(&amp;#39; &amp;lt;right paren&amp;gt; ::= &amp;#39;)&amp;#39; &amp;lt;left bracket&amp;gt; ::= &amp;#39;[&amp;#39; &amp;lt;right bracket&amp;gt; ::= &amp;#39;]&amp;#39; &amp;lt;left brace&amp;gt; ::= &amp;#39;{&amp;#39; &amp;lt;right brace&amp;gt; ::= &amp;#39;}&amp;#39; &amp;lt;left bound&amp;gt; := &amp;lt;left bracket&amp;gt; | &amp;lt;left paren&amp;gt; &amp;lt;right bound&amp;gt; := &amp;lt;right bracket&amp;gt; | &amp;lt;right paren&amp;gt; &amp;lt;int span wkt&amp;gt; ::= &amp;lt;left bound&amp;gt; &amp;lt;integer&amp;gt; &amp;lt;comma&amp;gt; &amp;lt;integer&amp;gt; &amp;lt;right bound&amp;gt; &amp;lt;float span wkt&amp;gt; ::= &amp;lt;left bound&amp;gt; &amp;lt;float&amp;gt; &amp;lt;comma&amp;gt; &amp;lt;float&amp;gt; &amp;lt;right bound&amp;gt; &amp;lt;period wkt&amp;gt; ::= &amp;lt;left bound&amp;gt; &amp;lt;timestamp with timezone&amp;gt; &amp;lt;comma&amp;gt; &amp;lt;timestamp with timezone&amp;gt; &amp;lt;right bound&amp;gt; &amp;lt;span wkt&amp;gt; ::= &amp;lt;int span wkt&amp;gt; | &amp;lt;float span wkt&amp;gt; | &amp;lt;period wkt&amp;gt; Time set types &amp;lt;timestamp set wkt&amp;gt; ::= &amp;lt;left brace&amp;gt; &amp;lt;timestamp with timezone&amp;gt; {&amp;lt;comma&amp;gt; &amp;lt;timestamp with timezone&amp;gt;} .</description>
+      <description>“Well-known text” is a scheme for writing moving features into a standard text string. It is an extension of the scheme for writing a simple features geometry into a standard text string.&#xA;WKT BNF For ease of presentation we suppose the following standard types: &amp;lt;integer&amp;gt;, &amp;lt;float&amp;gt;, &amp;lt;string&amp;gt;, and &amp;lt;timestamp with timezone&amp;gt;;&#xA;Span types &amp;lt;comma&amp;gt; ::= &amp;#39;,&amp;#39; &amp;lt;left paren&amp;gt; ::= &amp;#39;(&amp;#39; &amp;lt;right paren&amp;gt; ::= &amp;#39;)&amp;#39; &amp;lt;left bracket&amp;gt; ::= &amp;#39;[&amp;#39; &amp;lt;right bracket&amp;gt; ::= &amp;#39;]&amp;#39; &amp;lt;left brace&amp;gt; ::= &amp;#39;{&amp;#39; &amp;lt;right brace&amp;gt; ::= &amp;#39;}&amp;#39; &amp;lt;left bound&amp;gt; := &amp;lt;left bracket&amp;gt; | &amp;lt;left paren&amp;gt; &amp;lt;right bound&amp;gt; := &amp;lt;right bracket&amp;gt; | &amp;lt;right paren&amp;gt; &amp;lt;int span wkt&amp;gt; ::= &amp;lt;left bound&amp;gt; &amp;lt;integer&amp;gt; &amp;lt;comma&amp;gt; &amp;lt;integer&amp;gt; &amp;lt;right bound&amp;gt; &amp;lt;float span wkt&amp;gt; ::= &amp;lt;left bound&amp;gt; &amp;lt;float&amp;gt; &amp;lt;comma&amp;gt; &amp;lt;float&amp;gt; &amp;lt;right bound&amp;gt; &amp;lt;period wkt&amp;gt; ::= &amp;lt;left bound&amp;gt; &amp;lt;timestamp with timezone&amp;gt; &amp;lt;comma&amp;gt; &amp;lt;timestamp with timezone&amp;gt; &amp;lt;right bound&amp;gt; &amp;lt;span wkt&amp;gt; ::= &amp;lt;int span wkt&amp;gt; | &amp;lt;float span wkt&amp;gt; | &amp;lt;period wkt&amp;gt; Time set types &amp;lt;timestamp set wkt&amp;gt; ::= &amp;lt;left brace&amp;gt; &amp;lt;timestamp with timezone&amp;gt; {&amp;lt;comma&amp;gt; &amp;lt;timestamp with timezone&amp;gt;} .</description>
     </item>
-    
     <item>
       <title>Aggregate Operations</title>
       <link>/documentation/aggregation/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/documentation/aggregation/</guid>
-      <description>We explain next the aggregate operations for temporal types. These operations use a skip list for their implementation.
-Computation Model MEOS borrows from PostgreSQL the computation model for aggregate operations. These operations are defined in terms of state values, state transition functions, and final functions. An aggregate operation uses a state value that is updated as each successive input value is processed. The data type for the state value depends on the aggregate operation.</description>
+      <description>We explain next the aggregate operations for temporal types. These operations use a skip list for their implementation.&#xA;Computation Model MEOS borrows from PostgreSQL the computation model for aggregate operations. These operations are defined in terms of state values, state transition functions, and final functions. An aggregate operation uses a state value that is updated as each successive input value is processed. The data type for the state value depends on the aggregate operation.</description>
     </item>
-    
     <item>
       <title>Aggregating Trips</title>
       <link>/tutorialprograms/meos_aggregate_berlinmod/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/tutorialprograms/meos_aggregate_berlinmod/</guid>
-      <description>meos_aggregate_berlinmod.c
-This program reads a CSV file containing synthetic trip data in Brussels generated by the MobilityDB-BerlinMOD generator and computes
-the extent, that is, the bounding box of the spatial and time dimensions represented as an STBOX the temporal count, that is, the evolution on time of the number of vehicles travelling at an hour granularity. The output of the program is given next.
-61 trip records read Extent ------ SRID=3857;STBOX XT(((473212.</description>
+      <description>meos_aggregate_berlinmod.c&#xA;This program reads a CSV file containing synthetic trip data in Brussels generated by the MobilityDB-BerlinMOD generator and computes&#xA;the extent, that is, the bounding box of the spatial and time dimensions represented as an STBOX the temporal count, that is, the evolution on time of the number of vehicles travelling at an hour granularity. The output of the program is given next.&#xA;61 trip records read Extent ------ SRID=3857;STBOX XT(((473212.</description>
     </item>
-    
     <item>
       <title>Assembling Trips</title>
       <link>/tutorialprograms/meos_assemble_ais/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/tutorialprograms/meos_assemble_ais/</guid>
-      <description>meos_assemble_ais.c
-This program reads AIS data from a CSV file, constructs trips from these records, and outputs for each trip the MMSI, the number of instants, and the distance travelled.
-The output of the program is given next.
-156837 records read. 0 incomplete records ignored. 5 trips read. MMSI: 265513270, Number of input instants: 21799, Number of instants: 6, Distance travelled 11.695976 MMSI: 219027804, Number of input instants: 38326, Number of instants: 3285, Distance travelled 64865.</description>
+      <description>meos_assemble_ais.c&#xA;This program reads AIS data from a CSV file, constructs trips from these records, and outputs for each trip the MMSI, the number of instants, and the distance travelled.&#xA;The output of the program is given next.&#xA;156837 records read. 0 incomplete records ignored. 5 trips read. MMSI: 265513270, Number of input instants: 21799, Number of instants: 6, Distance travelled 11.695976 MMSI: 219027804, Number of input instants: 38326, Number of instants: 3285, Distance travelled 64865.</description>
     </item>
-    
     <item>
       <title>Clipping Trips to Geometries</title>
       <link>/tutorialprograms/meos_clip_berlinmod/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/tutorialprograms/meos_clip_berlinmod/</guid>
-      <description>meos_clip_berlinmod.c
-This program reads a CSV file containing synthetic trip data in Brussels generated by the MobilityDB-BerlinMOD generator and computes the distance traversed by the trips in the 19 Brussels municipalities (communes in French).
-The output of the program is given next.
-19 commune records read Brussels region record read Reading trip records ******************************************************* 55 trip records read. ----------------------------------------------------------------------------------------------------------------------------------------- | Commmunes ----------------------------------------------------------------------------------------------------------------------------------------------------- Veh | Distance | 2 4 6 7 9 10 11 12 14 15 16 17 18 19 | Inside | Outside --------------------------------------------------------------------------------------------------------------------------------------------------------- 1 | 256.</description>
+      <description>meos_clip_berlinmod.c&#xA;This program reads a CSV file containing synthetic trip data in Brussels generated by the MobilityDB-BerlinMOD generator and computes the distance traversed by the trips in the 19 Brussels municipalities (communes in French).&#xA;The output of the program is given next.&#xA;19 commune records read Brussels region record read Reading trip records ******************************************************* 55 trip records read. ----------------------------------------------------------------------------------------------------------------------------------------- | Commmunes ----------------------------------------------------------------------------------------------------------------------------------------------------- Veh | Distance | 2 4 6 7 9 10 11 12 14 15 16 17 18 19 | Inside | Outside --------------------------------------------------------------------------------------------------------------------------------------------------------- 1 | 256.</description>
     </item>
-    
     <item>
       <title>Data Model</title>
       <link>/documentation/datamodel/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/documentation/datamodel/</guid>
       <description>Temporal Types MEOS provides temporal types, which represent the evolution on time of values of some element type, called the base type of the temporal type. For instance, a temporal integer may be used to represent the evolution on time of the gear used by a moving car. In this case, the data type is temporal integer and the base type is integer. Similarly, a temporal float may be used to represent the evolution on time of the speed of a car.</description>
     </item>
-    
     <item>
       <title>Data Structures</title>
       <link>/documentation/datastructures/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/documentation/datastructures/</guid>
-      <description>Temporal Types Although MEOS is written in C, it aims at using well-proven object-oriented concepts for its development. The data model for the temporal types is implemented using the following conceptual type hierarchy.
-The supertype Temporal is a template type since it is used for all temporal types, such as temporal integers or temporal points. Temporal is also an abstract type, since it cannot be instantiated, only its subtypes can.</description>
+      <description>Temporal Types Although MEOS is written in C, it aims at using well-proven object-oriented concepts for its development. The data model for the temporal types is implemented using the following conceptual type hierarchy.&#xA;The supertype Temporal is a template type since it is used for all temporal types, such as temporal integers or temporal points. Temporal is also an abstract type, since it cannot be instantiated, only its subtypes can.</description>
     </item>
-    
     <item>
       <title>Disassembling Trips</title>
       <link>/tutorialprograms/meos_disassemble_berlinmod/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/tutorialprograms/meos_disassemble_berlinmod/</guid>
-      <description>meos_disassemble_berlinmod.c
-This program reads a CSV file containing synthetic trip data in Brussels generated by the MobilityDB-BerlinMOD generator, disassembles the trips into individual observations, and write them in a CSV file ordered by timestamp.
-The output of the program is given next.
-55 trip records read. 76024 observation records written. The CSV file generated by the program is given next.
-tripid,vehid,day,seqno,geom,t 3,3,2020-06-01,1,POINT(496102.813654 6595154.145012),2020-06-01 08:10:09.852+02 3,3,2020-06-01,1,POINT(496105.474664 6595158.378099),2020-06-01 08:10:11.352+02 3,3,2020-06-01,1,POINT(496107.99001 6595162.379464),2020-06-01 08:10:12.202733+02 [.</description>
+      <description>meos_disassemble_berlinmod.c&#xA;This program reads a CSV file containing synthetic trip data in Brussels generated by the MobilityDB-BerlinMOD generator, disassembles the trips into individual observations, and write them in a CSV file ordered by timestamp.&#xA;The output of the program is given next.&#xA;55 trip records read. 76024 observation records written. The CSV file generated by the program is given next.&#xA;tripid,vehid,day,seqno,geom,t 3,3,2020-06-01,1,POINT(496102.813654 6595154.145012),2020-06-01 08:10:09.852+02 3,3,2020-06-01,1,POINT(496105.474664 6595158.378099),2020-06-01 08:10:11.352+02 3,3,2020-06-01,1,POINT(496107.99001 6595162.379464),2020-06-01 08:10:12.202733+02 [.</description>
     </item>
-    
     <item>
       <title>Modification Operations</title>
       <link>/documentation/modification/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/documentation/modification/</guid>
       <description>We explain next the semantics of the modification operations for temporal types. These operations are needed for streaming applications where the observations arrive not necessarily ordered by time. The assumption is that most observations arrive ordered by time and thus, inserting in the middle of a temporal value is an exceptional operation. In this case, we need to push the subsequent instants in the extensible array using a memmove operation in C, which is a costly operation.</description>
     </item>
-    
     <item>
       <title>My First MEOS Program</title>
       <link>/tutorialprograms/meos_hello_world/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/tutorialprograms/meos_hello_world/</guid>
-      <description>meos_hello_world.c
-This program creates some temporal values from their WKT format and output them in MF-JSON format.
-The output of the program is given next.
--------------------- | Temporal Instant | -------------------- WKT: ---- POINT(1 1)@2000-01-01 MF-JSON: -------- { &amp;#34;type&amp;#34;: &amp;#34;MovingGeomPoint&amp;#34;, &amp;#34;stBoundedBy&amp;#34;: { &amp;#34;bbox&amp;#34;: [ [ 1, 1 ], [ 1, 1 ] ], &amp;#34;period&amp;#34;: { &amp;#34;begin&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;end&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34; } }, &amp;#34;coordinates&amp;#34;: [ 1, 1 ], &amp;#34;datetimes&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;interpolations&amp;#34;: [ &amp;#34;Discrete&amp;#34; ] } ------------------------------------------------- | Temporal Sequence with Discrete Interpolation | ------------------------------------------------- WKT: ---- {POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02} MF-JSON: -------- { &amp;#34;type&amp;#34;: &amp;#34;MovingGeomPoint&amp;#34;, &amp;#34;stBoundedBy&amp;#34;: { &amp;#34;bbox&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;period&amp;#34;: { &amp;#34;begin&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;end&amp;#34;: &amp;#34;2000-01-02T00:00:00+01&amp;#34; } }, &amp;#34;coordinates&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;datetimes&amp;#34;: [ &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;2000-01-02T00:00:00+01&amp;#34; ], &amp;#34;lower_inc&amp;#34;: true, &amp;#34;upper_inc&amp;#34;: true, &amp;#34;interpolations&amp;#34;: [ &amp;#34;Discrete&amp;#34; ] } ----------------------------------------------- | Temporal Sequence with Linear Interpolation | ----------------------------------------------- WKT: ---- [POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02] MF-JSON: -------- { &amp;#34;type&amp;#34;: &amp;#34;MovingGeomPoint&amp;#34;, &amp;#34;stBoundedBy&amp;#34;: { &amp;#34;bbox&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;period&amp;#34;: { &amp;#34;begin&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;end&amp;#34;: &amp;#34;2000-01-02T00:00:00+01&amp;#34; } }, &amp;#34;coordinates&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;datetimes&amp;#34;: [ &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;2000-01-02T00:00:00+01&amp;#34; ], &amp;#34;lower_inc&amp;#34;: true, &amp;#34;upper_inc&amp;#34;: true, &amp;#34;interpolations&amp;#34;: [ &amp;#34;Linear&amp;#34; ] } ------------------------------------------------- | Temporal Sequence with Stepwise Interpolation | ------------------------------------------------- WKT: ---- Interp=Stepwise;[POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02] MF-JSON: -------- { &amp;#34;type&amp;#34;: &amp;#34;MovingGeomPoint&amp;#34;, &amp;#34;stBoundedBy&amp;#34;: { &amp;#34;bbox&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;period&amp;#34;: { &amp;#34;begin&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;end&amp;#34;: &amp;#34;2000-01-02T00:00:00+01&amp;#34; } }, &amp;#34;coordinates&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;datetimes&amp;#34;: [ &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;2000-01-02T00:00:00+01&amp;#34; ], &amp;#34;lower_inc&amp;#34;: true, &amp;#34;upper_inc&amp;#34;: true, &amp;#34;interpolations&amp;#34;: [ &amp;#34;Stepwise&amp;#34; ] } --------------------------------------------------- | Temporal Sequence Set with Linear Interpolation | --------------------------------------------------- WKT: ---- {[POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02],[POINT(3 3)@2000-01-03, POINT(3 3)@2000-01-04]} MF-JSON: -------- { &amp;#34;type&amp;#34;: &amp;#34;MovingGeomPoint&amp;#34;, &amp;#34;stBoundedBy&amp;#34;: { &amp;#34;bbox&amp;#34;: [ [ 1, 1 ], [ 3, 3 ] ], &amp;#34;period&amp;#34;: { &amp;#34;begin&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;end&amp;#34;: &amp;#34;2000-01-04T00:00:00+01&amp;#34; } }, &amp;#34;sequences&amp;#34;: [ { &amp;#34;coordinates&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;datetimes&amp;#34;: [ &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;2000-01-02T00:00:00+01&amp;#34; ], &amp;#34;lower_inc&amp;#34;: true, &amp;#34;upper_inc&amp;#34;: true }, { &amp;#34;coordinates&amp;#34;: [ [ 3, 3 ], [ 3, 3 ] ], &amp;#34;datetimes&amp;#34;: [ &amp;#34;2000-01-03T00:00:00+01&amp;#34;, &amp;#34;2000-01-04T00:00:00+01&amp;#34; ], &amp;#34;lower_inc&amp;#34;: true, &amp;#34;upper_inc&amp;#34;: true } ], &amp;#34;interpolations&amp;#34;: [ &amp;#34;Linear&amp;#34; ] } ----------------------------------------------------- | Temporal Sequence Set with Stepwise Interpolation | ----------------------------------------------------- WKT: ---- Interp=Stepwise;{[POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02],[POINT(3 3)@2000-01-03, POINT(3 3)@2000-01-04]} MF-JSON: -------- { &amp;#34;type&amp;#34;: &amp;#34;MovingGeomPoint&amp;#34;, &amp;#34;stBoundedBy&amp;#34;: { &amp;#34;bbox&amp;#34;: [ [ 1, 1 ], [ 3, 3 ] ], &amp;#34;period&amp;#34;: { &amp;#34;begin&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;end&amp;#34;: &amp;#34;2000-01-04T00:00:00+01&amp;#34; } }, &amp;#34;sequences&amp;#34;: [ { &amp;#34;coordinates&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;datetimes&amp;#34;: [ &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;2000-01-02T00:00:00+01&amp;#34; ], &amp;#34;lower_inc&amp;#34;: true, &amp;#34;upper_inc&amp;#34;: true }, { &amp;#34;coordinates&amp;#34;: [ [ 3, 3 ], [ 3, 3 ] ], &amp;#34;datetimes&amp;#34;: [ &amp;#34;2000-01-03T00:00:00+01&amp;#34;, &amp;#34;2000-01-04T00:00:00+01&amp;#34; ], &amp;#34;lower_inc&amp;#34;: true, &amp;#34;upper_inc&amp;#34;: true } ], &amp;#34;interpolations&amp;#34;: [ &amp;#34;Stepwise&amp;#34; ] } The above ouput uses the pretty-printing options provided by the json-c library to facilite human reading.</description>
+      <description>meos_hello_world.c&#xA;This program creates some temporal values from their WKT format and output them in MF-JSON format.&#xA;The output of the program is given next.&#xA;-------------------- | Temporal Instant | -------------------- WKT: ---- POINT(1 1)@2000-01-01 MF-JSON: -------- { &amp;#34;type&amp;#34;: &amp;#34;MovingGeomPoint&amp;#34;, &amp;#34;stBoundedBy&amp;#34;: { &amp;#34;bbox&amp;#34;: [ [ 1, 1 ], [ 1, 1 ] ], &amp;#34;period&amp;#34;: { &amp;#34;begin&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;end&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34; } }, &amp;#34;coordinates&amp;#34;: [ 1, 1 ], &amp;#34;datetimes&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;interpolations&amp;#34;: [ &amp;#34;Discrete&amp;#34; ] } ------------------------------------------------- | Temporal Sequence with Discrete Interpolation | ------------------------------------------------- WKT: ---- {POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02} MF-JSON: -------- { &amp;#34;type&amp;#34;: &amp;#34;MovingGeomPoint&amp;#34;, &amp;#34;stBoundedBy&amp;#34;: { &amp;#34;bbox&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;period&amp;#34;: { &amp;#34;begin&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;end&amp;#34;: &amp;#34;2000-01-02T00:00:00+01&amp;#34; } }, &amp;#34;coordinates&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;datetimes&amp;#34;: [ &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;2000-01-02T00:00:00+01&amp;#34; ], &amp;#34;lower_inc&amp;#34;: true, &amp;#34;upper_inc&amp;#34;: true, &amp;#34;interpolations&amp;#34;: [ &amp;#34;Discrete&amp;#34; ] } ----------------------------------------------- | Temporal Sequence with Linear Interpolation | ----------------------------------------------- WKT: ---- [POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02] MF-JSON: -------- { &amp;#34;type&amp;#34;: &amp;#34;MovingGeomPoint&amp;#34;, &amp;#34;stBoundedBy&amp;#34;: { &amp;#34;bbox&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;period&amp;#34;: { &amp;#34;begin&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;end&amp;#34;: &amp;#34;2000-01-02T00:00:00+01&amp;#34; } }, &amp;#34;coordinates&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;datetimes&amp;#34;: [ &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;2000-01-02T00:00:00+01&amp;#34; ], &amp;#34;lower_inc&amp;#34;: true, &amp;#34;upper_inc&amp;#34;: true, &amp;#34;interpolations&amp;#34;: [ &amp;#34;Linear&amp;#34; ] } ------------------------------------------------- | Temporal Sequence with Stepwise Interpolation | ------------------------------------------------- WKT: ---- Interp=Stepwise;[POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02] MF-JSON: -------- { &amp;#34;type&amp;#34;: &amp;#34;MovingGeomPoint&amp;#34;, &amp;#34;stBoundedBy&amp;#34;: { &amp;#34;bbox&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;period&amp;#34;: { &amp;#34;begin&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;end&amp;#34;: &amp;#34;2000-01-02T00:00:00+01&amp;#34; } }, &amp;#34;coordinates&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;datetimes&amp;#34;: [ &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;2000-01-02T00:00:00+01&amp;#34; ], &amp;#34;lower_inc&amp;#34;: true, &amp;#34;upper_inc&amp;#34;: true, &amp;#34;interpolations&amp;#34;: [ &amp;#34;Stepwise&amp;#34; ] } --------------------------------------------------- | Temporal Sequence Set with Linear Interpolation | --------------------------------------------------- WKT: ---- {[POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02],[POINT(3 3)@2000-01-03, POINT(3 3)@2000-01-04]} MF-JSON: -------- { &amp;#34;type&amp;#34;: &amp;#34;MovingGeomPoint&amp;#34;, &amp;#34;stBoundedBy&amp;#34;: { &amp;#34;bbox&amp;#34;: [ [ 1, 1 ], [ 3, 3 ] ], &amp;#34;period&amp;#34;: { &amp;#34;begin&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;end&amp;#34;: &amp;#34;2000-01-04T00:00:00+01&amp;#34; } }, &amp;#34;sequences&amp;#34;: [ { &amp;#34;coordinates&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;datetimes&amp;#34;: [ &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;2000-01-02T00:00:00+01&amp;#34; ], &amp;#34;lower_inc&amp;#34;: true, &amp;#34;upper_inc&amp;#34;: true }, { &amp;#34;coordinates&amp;#34;: [ [ 3, 3 ], [ 3, 3 ] ], &amp;#34;datetimes&amp;#34;: [ &amp;#34;2000-01-03T00:00:00+01&amp;#34;, &amp;#34;2000-01-04T00:00:00+01&amp;#34; ], &amp;#34;lower_inc&amp;#34;: true, &amp;#34;upper_inc&amp;#34;: true } ], &amp;#34;interpolations&amp;#34;: [ &amp;#34;Linear&amp;#34; ] } ----------------------------------------------------- | Temporal Sequence Set with Stepwise Interpolation | ----------------------------------------------------- WKT: ---- Interp=Stepwise;{[POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02],[POINT(3 3)@2000-01-03, POINT(3 3)@2000-01-04]} MF-JSON: -------- { &amp;#34;type&amp;#34;: &amp;#34;MovingGeomPoint&amp;#34;, &amp;#34;stBoundedBy&amp;#34;: { &amp;#34;bbox&amp;#34;: [ [ 1, 1 ], [ 3, 3 ] ], &amp;#34;period&amp;#34;: { &amp;#34;begin&amp;#34;: &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;end&amp;#34;: &amp;#34;2000-01-04T00:00:00+01&amp;#34; } }, &amp;#34;sequences&amp;#34;: [ { &amp;#34;coordinates&amp;#34;: [ [ 1, 1 ], [ 2, 2 ] ], &amp;#34;datetimes&amp;#34;: [ &amp;#34;2000-01-01T00:00:00+01&amp;#34;, &amp;#34;2000-01-02T00:00:00+01&amp;#34; ], &amp;#34;lower_inc&amp;#34;: true, &amp;#34;upper_inc&amp;#34;: true }, { &amp;#34;coordinates&amp;#34;: [ [ 3, 3 ], [ 3, 3 ] ], &amp;#34;datetimes&amp;#34;: [ &amp;#34;2000-01-03T00:00:00+01&amp;#34;, &amp;#34;2000-01-04T00:00:00+01&amp;#34; ], &amp;#34;lower_inc&amp;#34;: true, &amp;#34;upper_inc&amp;#34;: true } ], &amp;#34;interpolations&amp;#34;: [ &amp;#34;Stepwise&amp;#34; ] } The above ouput uses the pretty-printing options provided by the json-c library to facilite human reading.</description>
     </item>
-    
     <item>
       <title>Normalization</title>
       <link>/documentation/normalization/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/documentation/normalization/</guid>
       <description>MEOS normalizes sequence or sequence set values that are continuous (that is, when the interpolation is linear or stepwise). For this, consecutive instant values are merged when possible. Recall that two consecutive instant values v1@t1 and v2@t2 define a linear function that states the evolution of the base value between the two timestamps. In this regard, the stepwise interpolation is just a particular case of the linear interpolation when the linear function is constant.</description>
     </item>
-    
     <item>
       <title>Reading from File</title>
       <link>/tutorialprograms/meos_read_ais/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/tutorialprograms/meos_read_ais/</guid>
-      <description>meos_read_ais.c
-This program reads AIS data from a CSV file and outputs a few of these records converted into temporal values.
-The output of the program is given next.
-MMSI: 566948000, Location: POINT(4.62 55.57)@2021-01-08 01:10:46+01 SOG : 0.5@2021-01-08 01:10:46+01 MMSI: 566948000, Location: POINT(4.62 55.57)@2021-01-08 01:21:25+01 SOG : 0.1@2021-01-08 01:21:25+01 MMSI: 219001559, Location: POINT(9.98 57.59)@2021-01-08 01:33:48+01 SOG : 0.1@2021-01-08 01:33:48+01 ... MMSI: 219001559, Location: POINT(9.98 57.59)@2021-01-09 00:43:35+01 SOG : 0@2021-01-09 00:43:35+01 MMSI: 566948000, Location: POINT(4.</description>
+      <description>meos_read_ais.c&#xA;This program reads AIS data from a CSV file and outputs a few of these records converted into temporal values.&#xA;The output of the program is given next.&#xA;MMSI: 566948000, Location: POINT(4.62 55.57)@2021-01-08 01:10:46+01 SOG : 0.5@2021-01-08 01:10:46+01 MMSI: 566948000, Location: POINT(4.62 55.57)@2021-01-08 01:21:25+01 SOG : 0.1@2021-01-08 01:21:25+01 MMSI: 219001559, Location: POINT(9.98 57.59)@2021-01-08 01:33:48+01 SOG : 0.1@2021-01-08 01:33:48+01 ... MMSI: 219001559, Location: POINT(9.98 57.59)@2021-01-09 00:43:35+01 SOG : 0@2021-01-09 00:43:35+01 MMSI: 566948000, Location: POINT(4.</description>
     </item>
-    
     <item>
       <title>Simplifying Trips</title>
       <link>/tutorialprograms/meos_simplify_berlinmod/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/tutorialprograms/meos_simplify_berlinmod/</guid>
-      <description>meos_simplify_berlinmod.c
-This program reads a CSV file containing synthetic trip data in Brussels generated by the MobilityDB-BerlinMOD generator, simplifies the trips using both Douglas-Peucker (DP) and Synchronized Euclidean Distance (SED, also known as Top-Down Time Ratio simplification), and outputs for each trip the initial number of instants and the number of instants of the two simplified trips.
-The output of the program is given next.
-55 records read. 0 incomplete records ignored.</description>
+      <description>meos_simplify_berlinmod.c&#xA;This program reads a CSV file containing synthetic trip data in Brussels generated by the MobilityDB-BerlinMOD generator, simplifies the trips using both Douglas-Peucker (DP) and Synchronized Euclidean Distance (SED, also known as Top-Down Time Ratio simplification), and outputs for each trip the initial number of instants and the number of instants of the two simplified trips.&#xA;The output of the program is given next.&#xA;55 records read. 0 incomplete records ignored.</description>
     </item>
-    
     <item>
       <title>Storing in MobilityDB</title>
       <link>/tutorialprograms/meos_store_ais/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/tutorialprograms/meos_store_ais/</guid>
-      <description>meos_store_ais.c
-This program reads AIS data from a CSV file, converts them into temporal values, and stores them in MobilityDB. The program uses the libpq library to connect to PostgreSQL.
-The output of the program is given next.
-Creating the table in the database NOTICE: table &amp;#34;aisinstants&amp;#34; does not exist, skipping Start processing the file 156837 records read. 0 incomplete records ignored. Query &amp;#39;SELECT COUNT(*) FROM public.AISInstants&amp;#39; returned 156837 A similar result can be obtained in MobilityDB with the following SQL query, assuming that the CSV file has been previously loaded into the AISInput table.</description>
+      <description>meos_store_ais.c&#xA;This program reads AIS data from a CSV file, converts them into temporal values, and stores them in MobilityDB. The program uses the libpq library to connect to PostgreSQL.&#xA;The output of the program is given next.&#xA;Creating the table in the database NOTICE: table &amp;#34;aisinstants&amp;#34; does not exist, skipping Start processing the file 156837 records read. 0 incomplete records ignored. Query &amp;#39;SELECT COUNT(*) FROM public.AISInstants&amp;#39; returned 156837 A similar result can be obtained in MobilityDB with the following SQL query, assuming that the CSV file has been previously loaded into the AISInput table.</description>
     </item>
-    
     <item>
       <title>Stream Processing</title>
       <link>/tutorialprograms/meos_stream_ais/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/tutorialprograms/meos_stream_ais/</guid>
-      <description>meos_stream_ais.c
-A simple program that reads AIS data from a CSV file, accumulates the observations in main memory and send the temporal values to a MobilityDB database when they reach a given number of instants in order to free the memory and ingest the newest observations. The program uses the libpq library to connect to PostgreSQL.
-The output of the program is given next.
-Creating the table AISTrips in the database Accumulating 1000 instants before sending them to the database (one marker every database update) ********************************************************************************************************** 156837 records read.</description>
+      <description>meos_stream_ais.c&#xA;A simple program that reads AIS data from a CSV file, accumulates the observations in main memory and send the temporal values to a MobilityDB database when they reach a given number of instants in order to free the memory and ingest the newest observations. The program uses the libpq library to connect to PostgreSQL.&#xA;The output of the program is given next.&#xA;Creating the table AISTrips in the database Accumulating 1000 instants before sending them to the database (one marker every database update) ********************************************************************************************************** 156837 records read.</description>
     </item>
-    
     <item>
       <title>Tiling Trips</title>
       <link>/tutorialprograms/meos_tile_berlinmod/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/tutorialprograms/meos_tile_berlinmod/</guid>
-      <description>meos_tile_berlinmod.c
-This program reads a CSV file containing synthetic trip data in Brussels generated by the MobilityDB-BerlinMOD generator, splits the trips and the speed of these trips by tiles, and computes aggregate values of the count, duration, and distance of the tiles.
-The output of the program is given next.
-Processing records ******************************************************* 55 records read. 0 incomplete records ignored. ------------- Trip tiles ------------- Tile: (0,0), Box: SRID=3857;STBOX X(((470000,6575000),(475000,6580000))), Count: 8, Duration: 00:19:46.</description>
+      <description>meos_tile_berlinmod.c&#xA;This program reads a CSV file containing synthetic trip data in Brussels generated by the MobilityDB-BerlinMOD generator, splits the trips and the speed of these trips by tiles, and computes aggregate values of the count, duration, and distance of the tiles.&#xA;The output of the program is given next.&#xA;Processing records ******************************************************* 55 records read. 0 incomplete records ignored. ------------- Trip tiles ------------- Tile: (0,0), Box: SRID=3857;STBOX X(((470000,6575000),(475000,6580000))), Count: 8, Duration: 00:19:46.</description>
     </item>
-    
     <item>
       <title>Developer&#39;s Documentation</title>
       <link>/documentation/developer/</link>
       <pubDate>Fri, 29 Jul 2022 13:34:19 +0200</pubDate>
-      
       <guid>/documentation/developer/</guid>
-      <description>The developer&amp;rsquo;s documentation is available at https://docs.libmeos.org/html/modules.html
-Alternatively, you can generate the English developer&amp;rsquo;s documentation in HTML format from the source:
-git clone --branch develop https://github.com/MobilityDB/MobilityDB MobilityDB mkdir MobilityDB/build cd MobilityDB/build cmake -DMEOS=on -DDOC_DEV=on .. make -j make doc_dev The resulting HTML documentation will be generated in the doxygen directory of the build directory.</description>
+      <description>The developer&amp;rsquo;s documentation is available at https://estebanzimanyi.github.io/MobilityDB/index.html&#xA;Alternatively, you can generate the English developer&amp;rsquo;s documentation in HTML format from the source:&#xA;git clone --branch develop https://github.com/MobilityDB/MobilityDB MobilityDB mkdir MobilityDB/build cd MobilityDB/build cmake -DMEOS=on -DDOC_DEV=on .. make -j make doc_dev The resulting HTML documentation will be generated in the doxygen directory of the build directory.</description>
     </item>
-    
     <item>
       <title>Licence</title>
       <link>/project/licence/</link>
       <pubDate>Thu, 28 Jul 2022 12:25:55 +0000</pubDate>
-      
       <guid>/project/licence/</guid>
       <description>MEOS is open source software available under the terms of the PostgreSQL license</description>
     </item>
-    
   </channel>
 </rss>

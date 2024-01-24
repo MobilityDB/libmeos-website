@@ -5,64 +5,50 @@
     <link>/documentation/</link>
     <description>Recent content in Documentation on MEOS</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 29 Jul 2022 13:57:17 +0200</lastBuildDate><atom:link href="/documentation/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Fri, 29 Jul 2022 13:57:17 +0200</lastBuildDate>
+    <atom:link href="/documentation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Aggregate Operations</title>
       <link>/documentation/aggregation/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/documentation/aggregation/</guid>
-      <description>We explain next the aggregate operations for temporal types. These operations use a skip list for their implementation.
-Computation Model MEOS borrows from PostgreSQL the computation model for aggregate operations. These operations are defined in terms of state values, state transition functions, and final functions. An aggregate operation uses a state value that is updated as each successive input value is processed. The data type for the state value depends on the aggregate operation.</description>
+      <description>We explain next the aggregate operations for temporal types. These operations use a skip list for their implementation.&#xA;Computation Model MEOS borrows from PostgreSQL the computation model for aggregate operations. These operations are defined in terms of state values, state transition functions, and final functions. An aggregate operation uses a state value that is updated as each successive input value is processed. The data type for the state value depends on the aggregate operation.</description>
     </item>
-    
     <item>
       <title>Data Model</title>
       <link>/documentation/datamodel/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/documentation/datamodel/</guid>
       <description>Temporal Types MEOS provides temporal types, which represent the evolution on time of values of some element type, called the base type of the temporal type. For instance, a temporal integer may be used to represent the evolution on time of the gear used by a moving car. In this case, the data type is temporal integer and the base type is integer. Similarly, a temporal float may be used to represent the evolution on time of the speed of a car.</description>
     </item>
-    
     <item>
       <title>Data Structures</title>
       <link>/documentation/datastructures/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/documentation/datastructures/</guid>
-      <description>Temporal Types Although MEOS is written in C, it aims at using well-proven object-oriented concepts for its development. The data model for the temporal types is implemented using the following conceptual type hierarchy.
-The supertype Temporal is a template type since it is used for all temporal types, such as temporal integers or temporal points. Temporal is also an abstract type, since it cannot be instantiated, only its subtypes can.</description>
+      <description>Temporal Types Although MEOS is written in C, it aims at using well-proven object-oriented concepts for its development. The data model for the temporal types is implemented using the following conceptual type hierarchy.&#xA;The supertype Temporal is a template type since it is used for all temporal types, such as temporal integers or temporal points. Temporal is also an abstract type, since it cannot be instantiated, only its subtypes can.</description>
     </item>
-    
     <item>
       <title>Modification Operations</title>
       <link>/documentation/modification/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/documentation/modification/</guid>
       <description>We explain next the semantics of the modification operations for temporal types. These operations are needed for streaming applications where the observations arrive not necessarily ordered by time. The assumption is that most observations arrive ordered by time and thus, inserting in the middle of a temporal value is an exceptional operation. In this case, we need to push the subsequent instants in the extensible array using a memmove operation in C, which is a costly operation.</description>
     </item>
-    
     <item>
       <title>Normalization</title>
       <link>/documentation/normalization/</link>
       <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
-      
       <guid>/documentation/normalization/</guid>
       <description>MEOS normalizes sequence or sequence set values that are continuous (that is, when the interpolation is linear or stepwise). For this, consecutive instant values are merged when possible. Recall that two consecutive instant values v1@t1 and v2@t2 define a linear function that states the evolution of the base value between the two timestamps. In this regard, the stepwise interpolation is just a particular case of the linear interpolation when the linear function is constant.</description>
     </item>
-    
     <item>
       <title>Developer&#39;s Documentation</title>
       <link>/documentation/developer/</link>
       <pubDate>Fri, 29 Jul 2022 13:34:19 +0200</pubDate>
-      
       <guid>/documentation/developer/</guid>
-      <description>The developer&amp;rsquo;s documentation is available at https://docs.libmeos.org/html/modules.html
-Alternatively, you can generate the English developer&amp;rsquo;s documentation in HTML format from the source:
-git clone --branch develop https://github.com/MobilityDB/MobilityDB MobilityDB mkdir MobilityDB/build cd MobilityDB/build cmake -DMEOS=on -DDOC_DEV=on .. make -j make doc_dev The resulting HTML documentation will be generated in the doxygen directory of the build directory.</description>
+      <description>The developer&amp;rsquo;s documentation is available at https://estebanzimanyi.github.io/MobilityDB/index.html&#xA;Alternatively, you can generate the English developer&amp;rsquo;s documentation in HTML format from the source:&#xA;git clone --branch develop https://github.com/MobilityDB/MobilityDB MobilityDB mkdir MobilityDB/build cd MobilityDB/build cmake -DMEOS=on -DDOC_DEV=on .. make -j make doc_dev The resulting HTML documentation will be generated in the doxygen directory of the build directory.</description>
     </item>
-    
   </channel>
 </rss>
