@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Moving Feature Formats on MEOS</title>
+    <link>/movingfeaturesformats/</link>
+    <description>Recent content in Moving Feature Formats on MEOS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 29 Jul 2022 14:28:47 +0200</lastBuildDate><atom:link href="/movingfeaturesformats/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moving Features JSON (MF-JSON)</title>
+      <link>/movingfeaturesformats/mfjson/</link>
+      <pubDate>Fri, 29 Jul 2022 14:23:01 +0200</pubDate>
+      
+      <guid>/movingfeaturesformats/mfjson/</guid>
+      <description>“Moving Features JSON” is a standard for encoding moving features in JSON. By using MF-JSON, rather than some other arbitrary scheme, you maximize the interoperability of your JSON output. MF-JSON is an Open Geospatial Consortium standard, which extends the GeoJSON standard.
+Examples {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingBoolean&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:true,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingInteger&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:2,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingFloat&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:2.5,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingText&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:&amp;ldquo;walking&amp;rdquo;,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;coordinates&amp;rdquo;:[1,1],&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;crs&amp;rdquo;:{&amp;ldquo;type&amp;rdquo;:&amp;ldquo;name&amp;rdquo;,&amp;ldquo;properties&amp;rdquo;:{&amp;ldquo;name&amp;rdquo;:&amp;ldquo;EPSG:5676&amp;rdquo;}},&amp;ldquo;coordinates&amp;rdquo;:[1,1],&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingInteger&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:[1,2],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;coordinates&amp;rdquo;:[[1,1],[2,2]],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Linear&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingText&amp;rdquo;,&amp;ldquo;sequences&amp;rdquo;:[{&amp;ldquo;values&amp;rdquo;:[&amp;ldquo;driving&amp;rdquo;,&amp;ldquo;driving&amp;rdquo;],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true},{&amp;ldquo;values&amp;rdquo;:[&amp;ldquo;walking&amp;rdquo;,&amp;ldquo;walking&amp;rdquo;],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T10:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T11:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true}],&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Stepwise&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;sequences&amp;rdquo;:[{&amp;ldquo;coordinates&amp;rdquo;:[[1,1],[2,2]],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true},{&amp;ldquo;coordinates&amp;rdquo;:[[3,3],[3,3]],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T10:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T11:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true}],&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Linear&amp;rdquo;]} </description>
+    </item>
+    
+    <item>
+      <title>Well-Known Binary (WKB)</title>
+      <link>/movingfeaturesformats/wkb/</link>
+      <pubDate>Fri, 29 Jul 2022 14:22:51 +0200</pubDate>
+      
+      <guid>/movingfeaturesformats/wkb/</guid>
+      <description>“Well-known binary” is a scheme for writing moving features into a platform-independent array of bytes, usually for transport between systems or between programs. By using WKB, systems can avoid exposing their particular internal implementation of moving feature storage, for greater overall interoperability. It is an extension of the scheme for writing a simple features geometry into a platform-independent array of bytes.
+Data Types The WKB specification uses five basic types common to most typed languages: an unsigned byte, a 4-byte unsigned integer, an 8-byte unsigned integer, an 8-byte IEEE double, and a string of characters.</description>
+    </item>
+    
+    <item>
+      <title>Well-Known Text (WKT)</title>
+      <link>/movingfeaturesformats/wkt/</link>
+      <pubDate>Fri, 29 Jul 2022 14:22:43 +0200</pubDate>
+      
+      <guid>/movingfeaturesformats/wkt/</guid>
+      <description>“Well-known text” is a scheme for writing moving features into a standard text string. It is an extension of the scheme for writing a simple features geometry into a standard text string.
+WKT BNF For ease of presentation we suppose the following standard types: &amp;lt;integer&amp;gt;, &amp;lt;float&amp;gt;, &amp;lt;string&amp;gt;, and &amp;lt;timestamp with timezone&amp;gt;;
+Span types &amp;lt;comma&amp;gt; ::= &amp;#39;,&amp;#39; &amp;lt;left paren&amp;gt; ::= &amp;#39;(&amp;#39; &amp;lt;right paren&amp;gt; ::= &amp;#39;)&amp;#39; &amp;lt;left bracket&amp;gt; ::= &amp;#39;[&amp;#39; &amp;lt;right bracket&amp;gt; ::= &amp;#39;]&amp;#39; &amp;lt;left brace&amp;gt; ::= &amp;#39;{&amp;#39; &amp;lt;right brace&amp;gt; ::= &amp;#39;}&amp;#39; &amp;lt;left bound&amp;gt; := &amp;lt;left bracket&amp;gt; | &amp;lt;left paren&amp;gt; &amp;lt;right bound&amp;gt; := &amp;lt;right bracket&amp;gt; | &amp;lt;right paren&amp;gt; &amp;lt;int span wkt&amp;gt; ::= &amp;lt;left bound&amp;gt; &amp;lt;integer&amp;gt; &amp;lt;comma&amp;gt; &amp;lt;integer&amp;gt; &amp;lt;right bound&amp;gt; &amp;lt;float span wkt&amp;gt; ::= &amp;lt;left bound&amp;gt; &amp;lt;float&amp;gt; &amp;lt;comma&amp;gt; &amp;lt;float&amp;gt; &amp;lt;right bound&amp;gt; &amp;lt;period wkt&amp;gt; ::= &amp;lt;left bound&amp;gt; &amp;lt;timestamp with timezone&amp;gt; &amp;lt;comma&amp;gt; &amp;lt;timestamp with timezone&amp;gt; &amp;lt;right bound&amp;gt; &amp;lt;span wkt&amp;gt; ::= &amp;lt;int span wkt&amp;gt; | &amp;lt;float span wkt&amp;gt; | &amp;lt;period wkt&amp;gt; Time set types &amp;lt;timestamp set wkt&amp;gt; ::= &amp;lt;left brace&amp;gt; &amp;lt;timestamp with timezone&amp;gt; {&amp;lt;comma&amp;gt; &amp;lt;timestamp with timezone&amp;gt;} .</description>
+    </item>
+    
+  </channel>
+</rss>

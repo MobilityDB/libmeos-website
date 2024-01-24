@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project on MEOS</title>
+    <link>/project/</link>
+    <description>Recent content in Project on MEOS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 29 Jul 2022 11:47:58 +0200</lastBuildDate><atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Licence</title>
+      <link>/project/licence/</link>
+      <pubDate>Thu, 28 Jul 2022 12:25:55 +0000</pubDate>
+      
+      <guid>/project/licence/</guid>
+      <description>MEOS is open source software available under the terms of the PostgreSQL license</description>
+    </item>
+    
+  </channel>
+</rss>
