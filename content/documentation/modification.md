@@ -1,7 +1,7 @@
 ---
 title: "Modification Operations"
 date: 2022-07-29T13:57:17+02:00
-draft: false
+draft: true
 ---
 
 We explain next the semantics of the modification operations for temporal types. These operations are needed for streaming applications where the observations arrive not necessarily ordered by time. The assumption is that most observations arrive ordered by time and thus, inserting in the middle of a temporal value is an exceptional operation. In this case, we need to push the subsequent instants in the extensible array using a `memmove` operation in C, which is a costly operation. If on the contrary, the observations would arrive in a random order with respect to time, the extensible array data structure used in MobilityDB is not the right data structure, instead a [linked list](https://en.wikipedia.org/wiki/Linked_list) or a [skip list](https://en.wikipedia.org/wiki/Skip_list) of instants should be used. For example, in MobilityDB skip lists are used for [temporal aggregation](https://libmeos.org/documentation/aggregation/) operations since by definition the temporal values to aggregate come in random order of time.

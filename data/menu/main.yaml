@@ -8,7 +8,7 @@ main:
       - name: Licence
         ref: "/project/licence"
   - name: Documentation
-    #ref: "/documentation"
+    # ref: "/documentation"
     sub:
       - name: Data Model
         ref: "/documentation/datamodel"
@@ -16,8 +16,8 @@ main:
         ref: "/documentation/normalization"
       - name: Data Structures
         ref: "/documentation/datastructures"
-      # - name: Modification operations
-        # ref: "/documentation/modification"
+      - name: Modification operations
+        ref: "/documentation/modification"
       - name: Aggregate Operations
         ref: "/documentation/aggregation"
       - name: Developer's Documentation
