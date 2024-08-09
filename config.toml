@@ -3,6 +3,7 @@ title = "MEOS"
 theme = "hugo-geekdoc"
 googleAnalytics = "G-FV2077JQZ8"
 
+canonifyURLs = true
 pluralizeListTitles = false
 
 # Geekdoc required configuration
