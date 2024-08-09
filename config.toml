@@ -1,4 +1,4 @@
-seURL = "libmeos.org"
+baseURL = "libmeos.org"
 title = "MEOS"
 theme = "hugo-geekdoc"
 googleAnalytics = "G-FV2077JQZ8"
@@ -9,7 +9,7 @@ pluralizeListTitles = false
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 disablePathToLower = true
-
+enableGitInfo = true
 
 # Required if you want to render robots.txt template
 enableRobotsTXT = true
@@ -24,13 +24,10 @@ enableRobotsTXT = true
     endLevel = 9
 
 [taxonomies]
-   tag = "tags"
-
+  tag = "tags"
 
 [params]
-    geekdocMenuBundle = true
-    geekdocNextPrev = false
-    geekdocRepo = "https://github.com/MobilityDB/MobilityDB"
-    geekdocLegalNotice = "/project/licence/"
-    #geekdocEditPath = "/"
-
+  # See https://geekdocs.de/usage/configuration/#site-configuration
+  geekdocMenuBundle = true
+  geekdocNextPrev = false
+  geekdocRepo = "https://github.com/MobilityDB/MobilityDB"
