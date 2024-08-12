@@ -1,7 +1,7 @@
 ---
 title: Well-Known Binary (WKB)
 date: 2022-07-29T14:22:51+02:00
-draft: false
+draft: true
 ---
 
 “Well-known binary” is a scheme for writing moving features into a platform-independent array of bytes, usually for transport between systems or between programs. By using WKB, systems can avoid exposing their particular internal implementation of moving feature storage, for greater overall interoperability. It is an extension of the scheme for writing a [simple features](https://en.wikipedia.org/wiki/Simple_Features) geometry into a [platform-independent array of bytes](https://libgeos.org/specifications/wkb/).
