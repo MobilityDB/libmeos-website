@@ -5,6 +5,8 @@ main:
     sub:
       - name: About
         ref: "/"
+      - name: Installation
+        ref: "/project/installation"
       - name: Licence
         ref: "/project/licence"
   - name: Documentation
@@ -33,27 +35,6 @@ main:
           ref: "/movingfeaturesformats/mfjson"
   - name: Tutorial Programs
     ref: "/tutorialprograms/"
-    sub:
-        - name: My First MEOS Program
-          ref: "/tutorialprograms/meos_hello_world"
-        - name: Read from File
-          ref: "/tutorialprograms/meos_read_ais"
-        - name: Assemble Trips
-          ref: "/tutorialprograms/meos_assemble_ais"
-        - name: Store in MobilityDB
-          ref: "/tutorialprograms/meos_store_ais"
-        - name: Stream Processing
-          ref: "/tutorialprograms/meos_stream_ais"
-        - name: Disassemble Trips
-          ref: "/tutorialprograms/meos_disassemble_berlinmod"
-        - name: Clip Trips to Geometries
-          ref: "/tutorialprograms/meos_clip_berlinmod"
-        - name: Tile Trips
-          ref: "/tutorialprograms/meos_tile_berlinmod"
-        - name: Simplify Trips
-          ref: "/tutorialprograms/meos_simplify_berlinmod"
-        - name: Aggregate Trips
-          ref: "/tutorialprograms/meos_aggregate_berlinmod"
 
 
 

@@ -1,4 +1,4 @@
-baseURL = "https://mobilitydb.github.io/libmeos-website/"
+baseURL = "https://libmeos.org/"
 title = "MEOS"
 theme = "hugo-geekdoc"
 googleAnalytics = "G-FV2077JQZ8"
