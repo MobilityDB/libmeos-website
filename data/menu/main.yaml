@@ -9,6 +9,11 @@ main:
         ref: "/project/installation"
       - name: Licence
         ref: "/project/licence"
+  - name: Bindings
+    ref: "/bindings/"
+    sub:
+      - name: PyMEOS
+        ref: "/bindings/pymeos"
   - name: Documentation
     # ref: "/documentation"
     sub:
