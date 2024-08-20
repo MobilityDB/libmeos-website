@@ -60,7 +60,7 @@ Examples of sequence set values are as follows:
 'Interp=Stepwise;{[17@2018-01-01 08:00:00, 17.5@2018-01-01 08:05:00], [18@2018-01-01 08:10:00, 18@2018-01-01 08:15:00]}'
 ```
 
-A rich set of functions is available to perform various operations on temporal types. The developer's documentation available at [docs.libmeos.org](https://docs.libmeos.org/) give a detailed description of these functions.
+A rich set of functions is available to perform various operations on temporal types. The developer's documentation available at [docs.libmeos.org](http://docs.libmeos.org/) give a detailed description of these functions.
 
 Each temporal type is associated to another type, referred to as its **bounding box**, which represent its extent in the value and/or the time dimension. The bounding box of the various temporal types are as follows: 
 
