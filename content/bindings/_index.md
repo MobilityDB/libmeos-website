@@ -7,5 +7,6 @@ draft: false
 MEOS Bindings: 
 
 - [PyMEOS](pymeos/)
+- [GoMEOS](gomeos/)
 - [TODO](todo/)
 - ...
