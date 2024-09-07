@@ -8,6 +8,6 @@ JMEOS: A Java binding of the MEOS spatiotemporal library
 
 Short description: TODO
 
-Link to API docs: https://1-arijits.github.io/JMEOS/
+Link to API docs: https://mobilitydb.github.io/JMEOS/
 
 Github: https://github.com/MobilityDB/JMEOS
