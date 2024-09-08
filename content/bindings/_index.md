@@ -9,5 +9,3 @@ MEOS Bindings:
 - [PyMEOS](pymeos/)
 - [JMEOS](jmeos/)
 - [GoMEOS](gomeos/)
-- [TODO](todo/)
-- ...
