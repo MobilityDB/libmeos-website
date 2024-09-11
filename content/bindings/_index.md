@@ -6,6 +6,7 @@ draft: false
 
 MEOS Bindings: 
 
-- [PyMEOS](pymeos/)
-- [JMEOS](jmeos/)
-- [GoMEOS](gomeos/)
+- Python: [PyMEOS](pymeos/)
+- Java: [JMEOS](jmeos/)
+- Go: [GoMEOS](gomeos/)
+- Rust: [RustMEOS](rustmeos/)
