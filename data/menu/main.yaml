@@ -12,12 +12,14 @@ main:
   - name: Bindings
     ref: "/bindings/"
     sub:
-      - name: PyMEOS
+      - name: Python
         ref: "/bindings/pymeos"
-      - name: JMEOS
+      - name: Java
         ref: "/bindings/jmeos"
-      - name: GoMEOS
+      - name: Go
         ref: "/bindings/gomeos"
+      - name: Rust
+        ref: "/bindings/rustmeos"
   - name: Documentation
     # ref: "/documentation"
     sub:

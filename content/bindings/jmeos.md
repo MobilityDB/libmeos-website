@@ -1,5 +1,5 @@
 ---
-title: "JMEOS"
+title: "Java"
 date: 2024-08-31T12:13:56+02:00
 draft: false
 ---

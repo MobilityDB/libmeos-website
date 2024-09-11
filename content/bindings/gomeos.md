@@ -1,5 +1,5 @@
 ---
-title: "GoMEOS"
+title: "Go"
 date: 2024-08-31T12:26:38+02:00
 draft: false
 ---
