@@ -4,7 +4,7 @@ date: 2022-07-29T13:57:17+02:00
 draft: false
 ---
 
-[meos_assemble_ais.c](https://github.com/MobilityDB/MobilityDB/blob/develop/meos/examples/03_meos_assemble_ais.c)
+[03_ais_assemble.c](https://github.com/MobilityDB/MobilityDB/blob/master/meos/examples/03_ais_assemble.c)
 
 This program reads AIS data from a CSV file, constructs trips from these records, and outputs for each trip the MMSI, the number of instants, and the distance travelled.
 

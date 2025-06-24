@@ -4,7 +4,7 @@ date: 2022-07-29T13:57:17+02:00
 draft: false
 ---
 
-[meos_read_ais.c](https://github.com/MobilityDB/MobilityDB/blob/develop/meos/examples/02_meos_read_ais.c)
+[02_ais_read.c](https://github.com/MobilityDB/MobilityDB/blob/master/meos/examples/02_ais_read.c)
 
 This program reads AIS data from a CSV file and outputs a few of these records converted into temporal values.
 

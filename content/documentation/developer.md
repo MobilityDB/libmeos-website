@@ -10,12 +10,12 @@ Alternatively, you can generate the English developer's documentation in HTML fo
 
 
 ```bash
-  git clone --branch develop https://github.com/MobilityDB/MobilityDB MobilityDB
-  mkdir MobilityDB/build
-  cd MobilityDB/build
-  cmake -DMEOS=on -DDOC_DEV=on ..
-  make -j
-  make doc_dev
+git clone --branch develop https://github.com/MobilityDB/MobilityDB MobilityDB
+mkdir MobilityDB/build
+cd MobilityDB/build
+cmake -DMEOS=on -DDOC_DEV=on ..
+make -j
+make doc_dev
 ```
 
-The resulting HTML documentation will be generated in the doxygen directory of the build directory.
+The resulting HTML documentation will be generated in the `MobilityDB/build/doxygen` directory.

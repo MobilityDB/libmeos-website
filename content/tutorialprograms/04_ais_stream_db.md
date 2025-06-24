@@ -4,7 +4,7 @@ date: 2022-07-29T13:57:17+02:00
 draft: false
 ---
 
-[meos_stream_ais.c](https://github.com/estebanzimanyi/MobilityDB/blob/stops/meos/examples/04_meos_stream_ais.c)
+[04_ais_stream_db.c](https://github.com/estebanzimanyi/MobilityDB/blob/master/meos/examples/04_ais_stream_db.c)
 
 A simple program that reads AIS data from a CSV file, accumulates the observations in main memory and send the temporal values to a MobilityDB database when they reach a given number of instants in order to free the memory and ingest the newest observations. The program uses the [libpq](https://www.postgresql.org/docs/current/libpq.html) library to connect to PostgreSQL.
 

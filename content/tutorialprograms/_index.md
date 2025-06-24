@@ -5,16 +5,20 @@ draft: false
 ---
 
 Tutorial programs exploring the functionality provided by the MEOS library
+can be found in https://github.com/MobilityDB/MobilityDB/tree/master/meos/examples
 
--   [My First MEOS Program](/tutorialprograms/meos_hello_world/)
--   [Read from File](/tutorialprograms/meos_read_ais/)
--   [Assemble Trips](/tutorialprograms/meos_assemble_ais/)
--   [Store in MobilityDB](/tutorialprograms/meos_store_ais/)
--   [Disassemble Trips](/tutorialprograms/meos_disassemble_berlinmod/)
--   [Clip Trips to Geometries](/tutorialprograms/meos_clip_berlinmod/)
--   [Tile Trips](/tutorialprograms/meos_tile_berlinmod/)
--   [Simplify Trips](/tutorialprograms/meos_simplify_berlinmod/)
--   [Aggregate Trips](/tutorialprograms/meos_aggregate_berlinmod/)
+We hightlight below the introductory ones
 
-Similar programs in Python using [PyMEOS](https://github.com/MobilityDB/PyMEOS) can be found [here](https://github.com/MobilityDB/PyMEOS/tree/master/pymeos_examples).
+-   [My First MEOS Program](/tutorialprograms/01_hello_world/)
+-   [Read from File](/tutorialprograms/02_ais_read/)
+-   [Assemble Trips](/tutorialprograms/03_ais_assemble/)
+-   [Store in MobilityDB](/tutorialprograms/04_ais_store/)
+-   [Store in MobilityDB in streaming mode](/tutorialprograms/04_ais_stream_db/)
+-   [Disassemble Trips](/tutorialprograms/05_berlinmod_disassemble/)
+-   [Clip Trips to Geometries](/tutorialprograms/06_berlinmod_clip/)
+-   [Tile Trips](/tutorialprograms/07_berlinmod_tile/)
+-   [Simplify Trips](/tutorialprograms/08_berlinmod_simplify/)
+-   [Aggregate Trips](/tutorialprograms/09_berlinmod_aggregate/)
+
+Similar programs in Python using [PyMEOS](https://github.com/MobilityDB/PyMEOS) can be found [here](https://github.com/MobilityDB/PyMEOS-Examples).
 

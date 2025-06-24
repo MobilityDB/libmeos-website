@@ -4,7 +4,7 @@ date: 2022-07-29T13:57:17+02:00
 draft: false
 ---
 
-[meos_hello_world.c](https://github.com/MobilityDB/MobilityDB/blob/develop/meos/examples/01_meos_hello_world.c)
+[01_hello_world.c](https://github.com/MobilityDB/MobilityDB/blob/master/meos/examples/01_hello_world.c)
 
 This program creates some temporal values from their WKT format and output them in MF-JSON format.
 

@@ -4,7 +4,7 @@ date: 2022-07-29T13:57:17+02:00
 draft: false
 ---
 
-[meos_store_ais.c](https://github.com/MobilityDB/MobilityDB/blob/develop/meos/examples/04_meos_store_ais.c)
+[04_ais_store.c](https://github.com/MobilityDB/MobilityDB/blob/master/meos/examples/04_ais_store.c)
 
 This program reads AIS data from a CSV file, converts them into temporal values, and stores them in MobilityDB. The program uses the [libpq](https://www.postgresql.org/docs/current/libpq.html) library to connect to PostgreSQL.
 
