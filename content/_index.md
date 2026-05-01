@@ -22,10 +22,11 @@ The encoding choice is up to the consumer; values move losslessly between the th
 
 MEOS exposes its type system through bindings tailored to each host environment.
 
-| Environment | Binding |
+| Environment | Surface |
 |---|---|
 | PostgreSQL | [MobilityDB](https://mobilitydb.com) |
 | DuckDB | [MobilityDuck](https://github.com/MobilityDB/MobilityDuck) |
+| HTTP / OGC API | [MobilityAPI](https://github.com/MobilityDB/MobilityAPI) |
 | Python | [PyMEOS](https://github.com/MobilityDB/PyMEOS) |
 | Java | [JMEOS](https://github.com/MobilityDB/JMEOS) |
 | Rust | [meos-rs](https://github.com/MobilityDB/meos-rs) |
@@ -33,15 +34,16 @@ MEOS exposes its type system through bindings tailored to each host environment.
 | .NET | [MEOS.NET](https://github.com/MobilityDB/MEOS.NET) |
 | JavaScript | [MEOS.js](https://github.com/MobilityDB/MEOS.js) |
 
-Each binding exposes the same MEOS type system using the conventions of its host environment: SQL functions in PostgreSQL/DuckDB, idiomatic classes in PyMEOS / JMEOS / meos-rs / GoMEOS / MEOS.NET / MEOS.js. The C library is the source of truth for type semantics, encoding, and behaviour.
+Each surface exposes the same MEOS type system using the conventions of its host environment: SQL functions in PostgreSQL/DuckDB, REST endpoints in MobilityAPI, idiomatic classes in PyMEOS / JMEOS / meos-rs / GoMEOS / MEOS.NET / MEOS.js. The C library is the source of truth for type semantics, encoding, and behaviour.
 
 ## Architecture
 
 ```mermaid
 flowchart TB
-  meos(["MEOS<br/>C library"])
+  api["MobilityAPI<br/>(HTTP / OGC)"]
   pg["MobilityDB<br/>(PostgreSQL)"]
   duck["MobilityDuck<br/>(DuckDB)"]
+  meos(["MEOS<br/>C library"])
   py["PyMEOS<br/>(Python)"]
   java["JMEOS<br/>(Java)"]
   rust["meos-rs<br/>(Rust)"]
@@ -49,6 +51,8 @@ flowchart TB
   net["MEOS.NET<br/>(.NET / C#)"]
   js["MEOS.js<br/>(JavaScript)"]
 
+  api --> pg
+  api --> duck
   pg --> meos
   duck --> meos
   py --> meos
@@ -59,7 +63,17 @@ flowchart TB
   js --> meos
 ```
 
+The diagram shows three layers above MEOS: the SQL layers (MobilityDB and MobilityDuck) that expose MEOS as first-class database types; the HTTP layer (MobilityAPI) that fronts those SQL layers with an OGC-conforming REST surface; and the language bindings that consume MEOS in-process from application code. All three layers share the C library as their common substrate.
+
 Other consumers can be built directly on top of MEOS — additional language bindings, integrations with other DBMSs, or analytics platforms (Spark, Flink, Apache Beam, etc.). The MEOS C API is the common substrate.
+
+### Cross-binding consistency: MEOS-API
+
+Every binding exposes the same MEOS type system, so they need to stay in sync as MEOS evolves. Rather than each binding re-parsing MEOS's C headers independently, the project ships a shared machine-readable description: [`meos-api.json`](https://github.com/MobilityDB/MEOS-API).
+
+The `meos-api.json` catalog lists every function, struct, and enum that MEOS exposes — extracted from the C headers via libclang and enriched with manual annotations. Bindings consume this catalog to drive their code generation: when MEOS adds a function, every binding sees it on the next regeneration, with no per-binding hand-editing.
+
+This is the operational backbone of the canonical-pivot-library architecture. The schema is documented as a versioned specification (RFC [#836](https://github.com/MobilityDB/MobilityDB/issues/836)).
 
 ## Quickstart
 
