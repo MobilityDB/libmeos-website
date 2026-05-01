@@ -6,6 +6,32 @@ draft: false
 
 MEOS exposes its type system through bindings tailored to each host environment. Pick the binding that matches your stack.
 
+## Architecture
+
+```mermaid
+flowchart TB
+  meos(["MEOS<br/>C library"])
+  pg["MobilityDB<br/>(PostgreSQL)"]
+  duck["MobilityDuck<br/>(DuckDB)"]
+  py["PyMEOS<br/>(Python)"]
+  java["JMEOS<br/>(Java)"]
+  rust["meos-rs<br/>(Rust)"]
+  go["GoMEOS<br/>(Go)"]
+  net["MEOS.NET<br/>(.NET / C#)"]
+  js["MEOS.js<br/>(JavaScript)"]
+
+  pg --> meos
+  duck --> meos
+  py --> meos
+  java --> meos
+  rust --> meos
+  go --> meos
+  net --> meos
+  js --> meos
+```
+
+The C library is the source of truth for type semantics, encoding, and behaviour. Each binding is a language- or system-specific surface over the same underlying types — values written from one binding are readable from any other via the shared [encoding formats](/movingfeaturesformats/).
+
 ## Database bindings
 
 These bindings expose MEOS types as first-class types of a database or query engine, with full SQL support, indexing, and aggregation.
