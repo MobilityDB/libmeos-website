@@ -10,4 +10,6 @@ types as first-class DuckDB types and is suited to analytics
 workloads — in-process queries, Parquet / Arrow interchange,
 notebook-driven exploration.
 
-GitHub: https://github.com/MobilityDB/MobilityDuck
+## Resources
+
+* GitHub: https://github.com/MobilityDB/MobilityDuck

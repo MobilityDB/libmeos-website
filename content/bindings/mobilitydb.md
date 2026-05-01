@@ -11,8 +11,8 @@ integrates directly with [PostGIS](https://postgis.net/), so
 trajectories interoperate with conventional geometry / geography
 data without conversion.
 
-Project site: https://mobilitydb.com
+## Resources
 
-GitHub: https://github.com/MobilityDB/MobilityDB
-
-Documentation: https://docs.mobilitydb.com
+* Project site: https://mobilitydb.com
+* GitHub: https://github.com/MobilityDB/MobilityDB
+* Documentation: https://docs.mobilitydb.com

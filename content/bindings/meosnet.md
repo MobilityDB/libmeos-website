@@ -9,4 +9,6 @@ as idiomatic .NET classes via P/Invoke. Suitable for desktop
 applications (WPF, WinForms, Avalonia), Unity games consuming
 trajectory data, ASP.NET services, and any other .NET workload.
 
-GitHub: https://github.com/MobilityDB/MEOS.NET
+## Resources
+
+* GitHub: https://github.com/MobilityDB/MEOS.NET

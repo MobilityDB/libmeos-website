@@ -9,4 +9,6 @@ environments (via WebAssembly) and Node.js. Suitable for browser-side
 visualisations consuming trajectory data, Node.js services that
 manipulate temporal values, and any other JS workload.
 
-GitHub: https://github.com/MobilityDB/MEOS.js
+## Resources
+
+* GitHub: https://github.com/MobilityDB/MEOS.js
