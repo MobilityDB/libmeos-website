@@ -10,9 +10,10 @@ MEOS exposes its type system through bindings tailored to each host environment.
 
 ```mermaid
 flowchart TB
-  meos(["MEOS<br/>C library"])
+  api["MobilityAPI<br/>(HTTP / OGC)"]
   pg["MobilityDB<br/>(PostgreSQL)"]
   duck["MobilityDuck<br/>(DuckDB)"]
+  meos(["MEOS<br/>C library"])
   py["PyMEOS<br/>(Python)"]
   java["JMEOS<br/>(Java)"]
   rust["meos-rs<br/>(Rust)"]
@@ -20,6 +21,8 @@ flowchart TB
   net["MEOS.NET<br/>(.NET / C#)"]
   js["MEOS.js<br/>(JavaScript)"]
 
+  api --> pg
+  api --> duck
   pg --> meos
   duck --> meos
   py --> meos
@@ -39,6 +42,12 @@ These bindings expose MEOS types as first-class types of a database or query eng
 * **[PostgreSQL → MobilityDB](mobilitydb/)**
 * **[DuckDB → MobilityDuck](mobilityduck/)**
 
+## HTTP / OGC API
+
+This surface exposes MEOS-stored data over plain HTTP using the OGC API – Moving Features standard. Use it when the consumer is a browser, mobile client, or other HTTP-driven application that doesn't speak SQL.
+
+* **[MobilityAPI](mobilityapi/)**
+
 ## Language bindings
 
 These bindings expose MEOS to general-purpose programming languages. Use them when you want to manipulate temporal data in application code rather than inside a database.
@@ -56,6 +65,7 @@ These bindings expose MEOS to general-purpose programming languages. Use them wh
 |---|---|
 | have PostgreSQL in your stack | MobilityDB |
 | use DuckDB or want embedded analytics | MobilityDuck |
+| serve trajectories over HTTP / REST (OGC API) | MobilityAPI |
 | work in a Python notebook / data-science workflow | PyMEOS |
 | build a Java / Kotlin / Scala / Clojure backend | JMEOS |
 | build a Rust application | meos-rs |

@@ -1,44 +1,71 @@
 ---
 title: Well-Known Binary (WKB)
 date: 2022-07-29T14:22:51+02:00
-draft: true
+draft: false
 ---
 
-“Well-known binary” is a scheme for writing moving features into a platform-independent array of bytes, usually for transport between systems or between programs. By using WKB, systems can avoid exposing their particular internal implementation of moving feature storage, for greater overall interoperability. It is an extension of the scheme for writing a [simple features](https://en.wikipedia.org/wiki/Simple_Features) geometry into a [platform-independent array of bytes](https://libgeos.org/specifications/wkb/).
+Well-Known Binary (WKB) is the canonical binary encoding for MEOS values. It is the densest representation MEOS supports and the form used for storage, inter-process transfer, and any context where a temporal value travels as bytes — between bindings, into Parquet files, across the network.
 
-### Data Types
+## Specification
 
-The WKB specification uses five basic types common to most typed languages: an unsigned byte, a 4-byte unsigned integer, an 8-byte unsigned integer, an [8-byte IEEE double](https://en.wikipedia.org/wiki/Double-precision_floating-point_format), and a string of characters.
+The byte layout is documented as a versioned specification:
 
+* [**MEOS-WKB Specification (draft v0.9.0)**](https://github.com/MobilityDB/MobilityDB/blob/master/doc/specs/meos-wkb-0.9.md) — the formal byte-format specification, derived by reverse-documentation of the MEOS reference implementation. Tracks every per-family layout (sets, spans, span-sets, temporal Instants / Sequences / SequenceSets, `tbox`, `stbox`), versioning rules, and consumer ecosystem. Companion to RFC [#830](https://github.com/MobilityDB/MobilityDB/issues/830) (TemporalParquet).
+
+The spec was authored from the MEOS reference encoder in [`meos/src/temporal/type_out.c`](https://github.com/MobilityDB/MobilityDB/blob/master/meos/src/temporal/type_out.c) and decoder in [`meos/src/temporal/type_in.c`](https://github.com/MobilityDB/MobilityDB/blob/master/meos/src/temporal/type_in.c). Until ratified as v1.0, the implementation is the authoritative reference; the spec document iterates at v0.9.x.
+
+## Why WKB
+
+WKB extends the [Simple Features WKB](https://libgeos.org/specifications/wkb/) approach used by GEOS and PostGIS to the time dimension. The format is **self-describing** — every value carries its own type tag, flag byte, and any embedded sub-encodings (such as the SRID + endianness for spatial values), so a receiver can reconstruct the original temporal type without out-of-band metadata.
+
+This makes WKB suited to:
+
+- **Storage and database serialization** — what `temporal_as_wkb` / `temporal_from_wkb` produce and consume.
+- **Inter-process transfer** — sending values between MobilityDB, MobilityDuck, and any of the bindings without each having to agree on schema metadata.
+- **Embedding in container formats** — MEOS-WKB is the byte payload that [TemporalParquet](https://github.com/MobilityDB/MobilityDB/issues/830) wraps with file-level Parquet metadata, mirroring how GeoParquet wraps WKB-encoded geometries.
+
+## Overview of the byte layout
+
+A MEOS-WKB value begins with:
+
+| Byte | Meaning |
+|---|---|
+| `0x00` or `0x01` | Endian marker (big-endian / little-endian) |
+| 2 bytes | Type tag (`T_TGEOMPOINT`, `T_FLOATSPAN`, …) |
+| 1 byte | Flag byte (subtype, interpolation, Z, geodetic, SRID-presence, …) |
+| (variable) | Type-specific payload — instants array, span endpoints, set elements, etc. |
+
+For spatial-temporal values (`tgeompoint`, `tgeography`, `tgeometry`, `tgeogpoint`), the embedded geometry payload uses unmodified PostGIS Extended WKB (EWKB), allowing existing spatial tools to peek at the spatial component without parsing the temporal envelope.
+
+Boxes (`tbox`, `stbox`) take a slightly different form — they begin with the endian byte directly, skipping the type tag, since the box variant is determined by the flag byte that follows.
+
+## Type coverage
+
+The format covers every MEOS public type:
+
+- Scalar temporals: `tbool`, `tint`, `tfloat`, `ttext`
+- Spatial-temporals: `tgeompoint`, `tgeogpoint`, `tgeometry`, `tgeography`
+- Sets: `intset`, `floatset`, `bigintset`, `tstzset`, `geomset`, `geogset`, `dateset`, `textset`
+- Spans: `intspan`, `floatspan`, `bigintspan`, `tstzspan`, `datespan`
+- Span sets: `intspanset`, `floatspanset`, `bigintspanset`, `tstzspanset`, `datespanset`
+- Bounding boxes: `tbox`, `stbox`
+
+For per-family byte-layout details, see the [specification](https://github.com/MobilityDB/MobilityDB/blob/master/doc/specs/meos-wkb-0.9.md).
+
+## Use in code
+
+```c
+#include <meos.h>
+
+Temporal *t = (Temporal *) tfloat_in("[1.5@2026-01-01, 2.5@2026-01-02]");
+
+size_t size;
+uint8_t *wkb = temporal_as_wkb(t, WKB_NDR, &size);  // little-endian
+// ... transmit / store wkb ...
+
+Temporal *t2 = (Temporal *) temporal_from_wkb(wkb, size);
 ```
-// byte : 1 byte
-// uint32 : 32 bit unsigned integer (4 bytes)
-// uint64 : 64 bit unsigned integer (8 bytes)
-// double : double precision number (8 bytes)
-// string : string of characters (variable number of bytes)
-```
 
-### Byte Order
+Equivalent functions exist for every type family (`set_as_wkb`, `span_as_wkb`, `tbox_as_wkb`, etc.). Each binding exposes the same surface in its idiomatic form: `t.as_wkb()` in PyMEOS, `t.asWkb()` in JMEOS, and so on.
 
-In order to allow portability between systems with difference architectures, the representation of those types is conditioned by the `wkbByteOrder`.
-
-```
-enum wkbByteOrder  {
-wkbXDR = 0, // Big Endian
-wkbNDR = 1  // Little Endian
-};
-```
-
-A “little endian” integer has the least-significant bytes first, hence “little”. For example, the number 1, encoded in little- and big- endian:
-
-```
-# Little endian
-01 00 00 00
-
-# Big endian
-00 00 00 01
-```
-
-In practice this means that almost all WKB is encoded little endian, since most modern processors are little endian, but the existence of the wkbByteOrder allows WKB to transport geometry easily between systems of different endianness.
-
-
+The hex variants (`temporal_as_hexwkb`, `temporal_from_hexwkb`) produce / consume the same bytes encoded as ASCII hex — useful for embedding in text protocols (HTTP query strings, JSON columns) where binary safety is fragile.
