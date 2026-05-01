@@ -53,6 +53,56 @@ flowchart TB
 
 Other consumers can be built directly on top of MEOS — additional language bindings, integrations with other DBMSs, or analytics platforms (Spark, Flink, Apache Beam, etc.). The MEOS C API is the common substrate.
 
+## Quickstart
+
+The same temporal value travels through every binding. Three thirty-second tastes:
+
+### C (the library directly)
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <meos.h>
+
+int main(void) {
+    meos_initialize();
+    meos_initialize_timezone("UTC");
+
+    Temporal *t = (Temporal *) tfloat_in(
+        "[1.5@2026-01-01, 2.5@2026-01-02]");
+    char *json = temporal_as_mfjson(t, true, 6, 1, NULL);
+    printf("%s\n", json);
+
+    free(json); free(t);
+    meos_finalize();
+    return 0;
+}
+```
+
+Compile with `gcc -I/usr/local/include -lmeos hello.c -o hello`.
+
+### Python (via PyMEOS)
+
+```python
+from pymeos import pymeos_initialize, TFloatSeq
+pymeos_initialize()
+
+t = TFloatSeq(string="[1.5@2026-01-01, 2.5@2026-01-02]")
+print(t.as_mfjson())
+```
+
+Install with `pip install pymeos`.
+
+### SQL (via MobilityDB on PostgreSQL)
+
+```sql
+CREATE EXTENSION mobilitydb CASCADE;
+
+SELECT asMFJSON(tfloat '[1.5@2026-01-01, 2.5@2026-01-02]');
+```
+
+All three produce the same MF-JSON document — that's the point of the encoding-as-common-substrate model.
+
 ## Learn the basics
 
 A nine-step tutorial series walks through the essence of the library. Several steps offer **variants** that swap an axis without changing the lesson — typically a different coordinate system (Cartesian vs. geodetic), a different input source (real-world AIS vs. synthetic BerlinMOD), or a different I/O target (in-process, DB, file). Pick the variant that matches your stack:
