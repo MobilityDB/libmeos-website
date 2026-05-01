@@ -95,3 +95,9 @@ The catalog grows over time as new external base types are lifted to
 their temporal counterparts. Bindings consume whatever MEOS exposes;
 binding-specific availability follows the binding's own compile-time
 flags.
+
+For the conceptual model behind these types — instant / sequence /
+sequence-set subtypes, discrete / linear / stepwise interpolation, and
+how bounding boxes work — see the [Data Model](../datamodel/) page.
+For the on-the-wire encoding of values of any type in this catalog,
+see [Moving Feature Formats](/movingfeaturesformats/).

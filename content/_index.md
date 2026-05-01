@@ -6,9 +6,17 @@ draft: false
 
 MEOS (Mobility Engine, Open Source) is a C library for temporal and spatiotemporal data — moving objects, time-varying values, and time spans / sets. Databases, query engines, and language bindings consume MEOS to expose temporal types in their respective environments.
 
-MEOS extends the [ISO 19141:2008](https://www.iso.org/standard/41445.html) standard (Geographic information — Schema for moving features) to also represent the change of non-spatial attributes of features and the *temporal gaps* inherent to mobility data — periods during which no observations were collected, for instance due to signal loss.
-
 The library is inspired by [GEOS](https://libgeos.org/) (Geometry Engine, Open Source) — hence the name.
+
+## Standards alignment
+
+MEOS implements published standards rather than ad-hoc representations:
+
+* [**ISO 19141:2008**](https://www.iso.org/standard/41445.html) — *Geographic information — Schema for moving features.* MEOS extends it to also represent the evolution of non-spatial attributes and the *temporal gaps* inherent to real mobility data (periods during which no observations were collected, for instance due to signal loss).
+* [**OGC Moving Features JSON**](https://docs.opengeospatial.org/is/19-045r3/19-045r3.html) — the canonical JSON encoding for moving features, an extension of [GeoJSON](https://geojson.org/). MEOS implements it as its [MF-JSON encoding](/movingfeaturesformats/mfjson/).
+* **Well-Known Text** and **Well-Known Binary** — the same conventions used by [GEOS](https://libgeos.org/) and [PostGIS](https://postgis.net/), extended to the time dimension. See [WKT](/movingfeaturesformats/wkt/) and [WKB](/movingfeaturesformats/wkb/).
+
+The encoding choice is up to the consumer; values move losslessly between the three so a binding can pick whichever fits its transport.
 
 ## Where MEOS is consumed
 
