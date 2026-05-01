@@ -49,8 +49,14 @@ jobs:
           wget -qO /tmp/dart-sass.tar.gz \
             "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
           sudo tar -xzf /tmp/dart-sass.tar.gz -C /opt
-          sudo ln -sf /opt/dart-sass/dart-sass /usr/local/bin/dart-sass
+          # The tarball ships the binary at dart-sass/sass (not
+          # dart-sass/dart-sass). Symlink it under both names so that
+          # whichever Hugo invocation pattern (`sass` or `dart-sass`)
+          # is used, the binary is findable on PATH.
+          sudo ln -sf /opt/dart-sass/sass /usr/local/bin/sass
+          sudo ln -sf /opt/dart-sass/sass /usr/local/bin/dart-sass
           rm /tmp/dart-sass.tar.gz
+          sass --version
           dart-sass --version
       - name: Checkout
         uses: actions/checkout@v4
